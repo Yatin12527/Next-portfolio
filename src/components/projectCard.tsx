@@ -55,7 +55,7 @@ function ProjectCard({
         <CardHeader>
           <CardTitle className="mb-5 text-2xl flex justify-between font4 mt-2">
             {title}
-            <a href={title}>
+            <a href={`projects/${title}`}>
               <Link className="hover:scale-125 ease-in-out duration-300 active:animate-in cursor-pointer" />
             </a>
           </CardTitle>
