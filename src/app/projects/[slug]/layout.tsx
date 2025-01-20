@@ -21,7 +21,7 @@ export default function ProjectLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body className="text-white">
-        <main className="max-w-screen-2xl mx-auto">{children}</main>
+        <main className="max-w-screen-2xl mx-auto font4">{children}</main>
       </body>
     </html>
   ) : null;
