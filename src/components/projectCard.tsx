@@ -8,6 +8,7 @@ import {
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Link } from "lucide-react";
 
+
 interface AvatarProps {
   src: string[];
   fallback: string;
@@ -68,8 +69,8 @@ function ProjectCard({
           <div className="flex flex-row">
             <NewAvatar fallback="error" src={avsrc} bg={bg} />
           </div>
-          <div className="mt-5">
-            <img src={src} />
+          <div className="mt-5 ">
+            <img src={src} alt="" />
           </div>
         </CardContent>
       </Card>

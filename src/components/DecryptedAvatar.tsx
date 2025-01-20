@@ -6,7 +6,7 @@ function DecryptedAvatar() {
     <div>
       <Avatar>
         <AvatarImage />
-        <AvatarFallback className="border border-zinc-700">
+        <AvatarFallback className="border border-zinc-700 ">
           <DecryptedText
             text="YC"
             animateOn="view"

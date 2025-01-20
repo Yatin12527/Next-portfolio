@@ -74,10 +74,10 @@ function Skills() {
         className="text-[54px]  text-transparent bg-clip-text bg-gradient-to-r bg-blue-800 from-slate-200 to-gray-600 drop-shadow-glow font-bold "
         data-aos="fade-down"
       >
-        <span className="font2 italic">Technologies</span> I've worked with
+        <span className="font2 italic">Technologies</span> I&apos;ve worked with
       </p>
       <p className="mt-10 text-2xl font3 text-gray-500" data-aos="fade-down">
-        I've gained proficiency in a range of modern development{" "}
+        I&apos;ve gained proficiency in a range of modern development{" "}
         <span className="font2 italic">technologies & tools</span> over the
         course of my learning journey.
       </p>
