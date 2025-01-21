@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react";
 import { ChevronDown } from "lucide-react";
+import Link from "next/link";
 
 function About() {
   return (
@@ -29,11 +30,13 @@ function About() {
             data-aos="zoom-in"
             alt="star"
           />
+          <Link href="#skills">
           <ChevronDown
-            className="animate-bounce"
+            className="animate-bounce cursor-pointer"
             size={34}
             data-aos="zoom-in"
           />
+          </Link>
         </div>
       </div>
     </>
