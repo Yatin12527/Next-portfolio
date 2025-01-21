@@ -6,8 +6,8 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Link } from "lucide-react";
-
+import { ExternalLink } from 'lucide-react';
+import Link from "next/link";
 
 interface AvatarProps {
   src: string[];
@@ -56,9 +56,9 @@ function ProjectCard({
         <CardHeader>
           <CardTitle className="mb-5 text-2xl flex justify-between font4 mt-2">
             {title}
-            <a href={`projects/${title}`}>
-              <Link className="hover:scale-125 ease-in-out duration-300 active:animate-in cursor-pointer" />
-            </a>
+            <Link href={`projects/${title}`}>
+              <ExternalLink  className="hover:scale-125 ease-in-out duration-300 active:animate-in cursor-pointer" />
+            </Link>
           </CardTitle>
           <CardDescription>
             <span className="font-bold">{year}</span>&nbsp;-&nbsp;
