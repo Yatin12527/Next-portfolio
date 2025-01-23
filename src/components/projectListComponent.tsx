@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import GlowingDot from "./glowdot";
 import Link from "next/link";
+import AosInit from "./AosInit";
 interface ProjectListComponentProps{
     title:string,
     src:string,
@@ -18,6 +19,8 @@ interface ProjectListComponentCard2Props{
 
 function ProjectListComponent({title, src, date, link}:ProjectListComponentProps) {
   return (
+    <>
+    <AosInit/>
     <div id="first-card">
       <div className="flex justify-between items-center pr-3">
         <div className="flex flex-col">
@@ -49,12 +52,14 @@ function ProjectListComponent({title, src, date, link}:ProjectListComponentProps
         className="w-full"
       />
     </div>
+    </>
   );
 }
 
 function ProjectListComponentCard2({title,description,details,img}:ProjectListComponentCard2Props) {
   return (
     <div id="second-card" className="mt-10">
+      <AosInit/>
       <div className="flex items-center gap-2">
         <GlowingDot />
         <p
@@ -83,6 +88,7 @@ function ProjectListComponentCard2({title,description,details,img}:ProjectListCo
         />
       </div>
     </div>
+    
   );
 }
 

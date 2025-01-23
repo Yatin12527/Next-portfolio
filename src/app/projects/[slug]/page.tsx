@@ -1,38 +1,49 @@
+"use client";
+
+import { useParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import projectList from "@/components/projectItems";
 import {
   ProjectListComponent,
   ProjectListComponentCard2,
 } from "@/components/projectListComponent";
+import AosInit from "@/components/AosInit";
 
 function Project() {
+  const params = useParams<{ slug: string }>();
+
+  const selectedProject = projectList.find((project) => {
+    return project.title.toLowerCase() === params.slug?.toLowerCase();
+  });
+
+  if (!selectedProject) {
+    return <div>Project not found. Check console logs for details.</div>;
+  }
+
   return (
-    <div className="flex flex-row ">
-      {/* Left Section - 20% width */}
+    <>
+      <AosInit />
+      <div className="flex flex-row ">
+        <div className="w-1/5 p-4 top-0">
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
+          <a href="/#projects">
+            <button className="flex flex-row border space-x-2 border-zinc-500 rounded-3xl hover:shadow-[0px_0px_23px_0px_rgba(255,255,255,0.4)] transition-all ease-in-out cursor-pointer active:scale-90 w-fit p-3 bg-[rgba(1,9,28,255)] fixed left-1">
+              <ArrowLeft />
+              <p>Back</p>
+            </button>
+          </a>
+        </div>
 
-      <div className="w-1/5 p-4 top-0">
-        {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-        <a href="/#projects">
-          <button className="flex flex-row border space-x-2 border-zinc-500 rounded-3xl hover:shadow-[0px_0px_23px_0px_rgba(255,255,255,0.4)] transition-all ease-in-out cursor-pointer active:scale-90 w-fit p-3 bg-[rgba(1,9,28,255)] fixed left-1">
-            <ArrowLeft />
-            <p>Back</p>
-          </button>
-        </a>
-      </div>
-
-      {/* Middle Section - 60% width */}
-      <div className="w-3/5 p-10 ">
-        {projectList.map((data) => (
+        <div className="w-3/5 p-10 ">
           <ProjectListComponent
-            key={data.title}
-            title={data.title}
-            date={data.date}
-            src={data.src}
-            link={data.link}
+            key={selectedProject.title}
+            title={selectedProject.title}
+            date={selectedProject.date}
+            src={selectedProject.src}
+            link={selectedProject.link}
           />
-        ))}
-        {projectList.map((data) =>
-          data.Info.map((info) => (
+
+          {selectedProject.Info.map((info) => (
             <ProjectListComponentCard2
               key={info.description}
               title={info.title}
@@ -40,25 +51,14 @@ function Project() {
               details={info.details}
               img={info.img}
             />
-          ))
-        )}{" "}
-      </div>
+          ))}
+        </div>
 
-      {/* Right Section - 20% width */}
-      <div className="w-1/5 p-4 fixed top-0 right-2">
-        <div className="flex flex-col">
-          <p
-            className="text-5xl sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-gray-500 drop-shadow-glow font-bold text-center"
-            data-aos="fade-down"
-          >
-            Title
-          </p>
-          <p className="text-2xl mb-3 text-gray-500" data-aos="fade-down">
-            Jan 2025
-          </p>
+        <div className="w-1/5 p-4 fixed top-0 right-2">
+          <div className="flex flex-col"></div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
