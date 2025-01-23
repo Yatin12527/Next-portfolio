@@ -1,24 +1,24 @@
 import ProjectCard from "@/components/projectCard";
 const projectComponent = [
   {
-    title: "Problem Piper",
+    title: "Synxkill",
     description:
-      "Developed the frontend of a platform for distributing programming challenges, leveraging next.js.",
-    src: "/project1.png",
+      "Developed a platform for personlised tution for technical information.A user can either create a course and teach people or they can buy any personlised course and study.",
+    src: "/project2.png",
     year: "Nov 2024",
-    avsrc: ["/next.png", "/tailwind.webp", "/python.png", "/fastapi.png"],
-    bg: ["bg-white", "bg-white", "bg-blue-900", "bg-white"],
-    spotlightcolor: "	rgba(255, 0, 255, 0.15)",
+    avsrc: ["/react.png", "/tailwind.webp", "/mongo.png", "/express.png"],
+    bg: ["bg-blue-900", "bg-white", "bg-green-900", "bg-black"],
+    spotlightcolor: "	rgba(255, 148, 112,0.45)",
   },
   {
     title: "Portfolio",
     description:
       "A sleek portfolio built with Next.js and Tailwind CSS, featuring responsive design and modern aesthetics.",
-    src: "/project2.png",
+    src: "/portfolio1.png",
     year: "Jan 2025",
     avsrc: ["/next.png", "/tailwind.webp"],
     bg: ["bg-white", "bg-white"],
-    spotlightcolor: "	rgba(255, 255, 255, 0.15)",
+    spotlightcolor: "	rgba(255, 255, 255, 0.25)",
   },
 ];
 function Projects() {
