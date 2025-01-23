@@ -26,7 +26,7 @@ function ProjectListComponent({title, src, date, link}:ProjectListComponentProps
         <div className="flex flex-col">
           <p
             className="text-5xl sm:text-7xl md:text-8xl text-transparent bg-clip-text bg-gradient-to-r from-slate-200 to-gray-500 drop-shadow-glow font-bold text-center"
-            data-aos="fade-down"
+            // data-aos="fade-down"
           >
             {title}
           </p>
@@ -64,7 +64,8 @@ function ProjectListComponentCard2({title,description,details,img}:ProjectListCo
         <GlowingDot />
         <p
           className="text-xl text-gray-300 drop-shadow-glow font-extrabold text-center"
-          data-aos="fade-down"
+          // data-aos="fade-down"
+          id={title}
         >
           {title}
         </p>
@@ -72,7 +73,7 @@ function ProjectListComponentCard2({title,description,details,img}:ProjectListCo
       <div className="flex flex-col mt-10 px-2 gap-y-4 border border-b-zinc-500 pb-4">
         <p
           className="text-4xl text-start font-extrabold drop-shadow-glow"
-          data-aos="fade-down"
+          // data-aos="fade-down"
         >
           {description}
         </p>

@@ -1,5 +1,5 @@
 "use client";
-
+import { useState } from "react";
 import { useParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import projectList from "@/components/projectItems";
@@ -8,9 +8,36 @@ import {
   ProjectListComponentCard2,
 } from "@/components/projectListComponent";
 import AosInit from "@/components/AosInit";
+import Link from "next/link";
 
+const StickySidebar = ({
+  detail,
+  isActive,
+  onClick,
+}: {
+  detail: string;
+  isActive: boolean;
+  onClick: () => void;
+}) => {
+  return (
+    <Link href={`#${detail}`}>
+      <button
+        className={`
+          font3 
+          m-1 
+          cursor-pointer 
+          ${isActive ? "text-white" : "text-gray-400"}
+        `}
+        onClick={onClick}
+      >
+        {detail}
+      </button>
+    </Link>
+  );
+};
 function Project() {
   const params = useParams<{ slug: string }>();
+  const [activeSection, setActiveSection] = useState<string | null>(null);
 
   const selectedProject = projectList.find((project) => {
     return project.title.toLowerCase() === params.slug?.toLowerCase();
@@ -54,8 +81,20 @@ function Project() {
           ))}
         </div>
 
-        <div className="w-1/5 p-4 fixed top-0 right-2">
-          <div className="flex flex-col"></div>
+        <div className="w-1/5 p-4 fixed top-14 right-0">
+          <div className="flex flex-col">
+            <p className="text-2xl text-start font-extrabold drop-shadow-glow mb-3">
+              On this page
+            </p>
+            {selectedProject.Info.map((info) => (
+              <StickySidebar
+                key={info.title}
+                detail={info.title}
+                isActive={activeSection === info.title}
+                onClick={() => setActiveSection(info.title)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>
