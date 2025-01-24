@@ -9,14 +9,30 @@ export default {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "slide-fade-in": {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(-20px) scale(0.95)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0) scale(1)",
+          },
+        },
+      },
+      animation: {
+        "slide-fade-in": "slide-fade-in 0.7s ease-out forwards",
+      },
+
       screens: {
         custom1: "1102px",
         custom2: "752px",
         custom3: "507px",
         custom4: "1305px",
-        custom5:"953px",
-        custom6:"1075px",
-        custom7:"900px",
+        custom5: "953px",
+        custom6: "1075px",
+        custom7: "900px",
       },
       dropShadow: {
         glow: [

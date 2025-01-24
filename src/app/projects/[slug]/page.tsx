@@ -9,6 +9,7 @@ import {
   ProjectListComponentCard2,
 } from "@/components/projectListComponent";
 import Link from "next/link";
+import AosInit from "@/components/AosInit";
 
 const StickySidebar = ({
   detail,
@@ -47,16 +48,20 @@ function Project() {
 
   return (
     <>
+      <AosInit />
       <div className="flex flex-col custom7:flex-row ">
-        <div className="w-1/5  ">
+        <div className="w-1/5">
           <Link href="/#projects">
-            <button className="flex flex-row border space-x-2 border-zinc-500 rounded-3xl hover:shadow-[0px_0px_23px_0px_rgba(255,255,255,0.4)] transition-all ease-in-out cursor-pointer active:scale-90 w-fit p-3 bg-[rgba(1,9,28,255)] fixed top-3 custom7:top-5 left-3">
-              <ArrowLeft />
+            <button
+              className="flex flex-row border space-x-2 border-zinc-500 rounded-3xl hover:shadow-[0px_0px_23px_0px_rgba(255,255,255,0.4)] transition-all ease-in-out cursor-pointer active:scale-90 w-fit p-3 bg-[rgba(1,9,28,255)] fixed top-3 custom7:top-5 left-3"
+              data-aos="fade-right"
+            >
+              <ArrowLeft data-aos="fade-right" />
               <p>Back</p>
             </button>
           </Link>
         </div>
-        <div className="w-full custom7:w-3/5 p-16 custom7:p-10">
+        <div className="w-full custom7:w-3/5 p-16 custom7:p-10 animate-slide-fade-in">
           <ProjectListComponent
             key={selectedProject.title}
             title={selectedProject.title}
@@ -85,7 +90,10 @@ function Project() {
             );
           })}
         </div>
-        <div className="hidden custom7:block w-1/5 p-4 custom7:fixed top-14 right-0">
+        <div
+          className="hidden custom7:block w-1/5 p-4 custom7:fixed top-14 right-0"
+          data-aos="fade-left"
+        >
           <div className="flex flex-col">
             <p className="text-xl custom6:text-2xl text-start font-extrabold drop-shadow-glow mb-3">
               On this page
