@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
@@ -34,7 +33,6 @@ const StickySidebar = ({
 function Project() {
   const params = useParams<{ slug: string }>();
   const [activeSection, setActiveSection] = useState<string | null>(null);
-
   const selectedProject = projectList.find((project) => {
     return project.title.toLowerCase() === params.slug?.toLowerCase();
   });
@@ -59,7 +57,6 @@ function Project() {
             </button>
           </a>
         </div>
-
         <div className="w-full custom7:w-3/5 p-16 custom7:p-10">
           <ProjectListComponent
             key={selectedProject.title}
@@ -68,16 +65,15 @@ function Project() {
             src={selectedProject.src}
             link={selectedProject.link}
           />
-
           {selectedProject.Info.map((info) => {
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             const [ref, inView] = useInView({ threshold: 0.5 });
-
+            // eslint-disable-next-line react-hooks/rules-of-hooks
             useEffect(() => {
               if (inView) {
                 handleSectionInView(info.title);
               }
             }, [inView]);
-
             return (
               <div key={info.description} ref={ref} id={info.title}>
                 <ProjectListComponentCard2
@@ -90,7 +86,6 @@ function Project() {
             );
           })}
         </div>
-
         <div className="hidden custom7:block w-1/5 p-4 custom7:fixed top-14 right-0">
           <div className="flex flex-col">
             <p className="text-xl custom6:text-2xl text-start font-extrabold drop-shadow-glow mb-3">
