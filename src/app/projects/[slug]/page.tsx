@@ -38,7 +38,7 @@ function Project() {
   });
 
   if (!selectedProject) {
-    return <div>Project not found. Check console logs for details.</div>;
+    return <div>Project not found</div>;
   }
 
   const handleSectionInView = (title: string) => {
