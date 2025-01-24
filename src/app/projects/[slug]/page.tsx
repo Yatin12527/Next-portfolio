@@ -53,7 +53,7 @@ function Project() {
         <div className="w-1/5">
           <Link href="/#projects">
             <button
-              className="flex flex-row border space-x-2 border-zinc-500 rounded-3xl hover:shadow-[0px_0px_23px_0px_rgba(255,255,255,0.4)] transition-all ease-in-out cursor-pointer active:scale-90 w-fit p-3 bg-[rgba(1,9,28,255)] fixed top-3 custom7:top-5 left-3"
+              className="flex flex-row border space-x-2 border-zinc-500 rounded-3xl hover:shadow-[0px_0px_23px_0px_rgba(255,255,255,0.4)] transition-all ease-in-out cursor-pointer active:scale-90 w-fit p-2 custom7:p-3 bg-[rgba(1,9,28,255)] fixed z-50 top-3 custom7:top-5 left-3"
               data-aos="fade-right"
             >
               <ArrowLeft data-aos="fade-right" />
