@@ -16,14 +16,9 @@ export default function ProjectLayout({
   }, []);
 
   return isClient ? (
-    <html lang="en" className="dark">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-      <body className="text-white">
-        <ProjectBG />
-        <main className="max-w-screen-2xl mx-auto font4">{children}</main>
-      </body>
-    </html>
+    <div className="relative">
+      <ProjectBG />
+      <main className="max-w-screen-2xl mx-auto font4">{children}</main>
+    </div>
   ) : null;
 }
