@@ -3,7 +3,7 @@ const projectList = [
     title: "Portfolio",
     date: "Jan 2025",
     src: "/portfolio1.png",
-    link:"https://next-portfolio-theta-gold.vercel.app/",
+    link:"https://yatinder-portfolio.vercel.app/",
     Info: [
       {
         title: "Responsiveness",
