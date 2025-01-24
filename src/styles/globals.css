@@ -114,9 +114,10 @@ body {
   }
 }
 
-* {
+html {
   scroll-behavior: smooth;
 }
+
 
 .shine-effect {
   position: relative;

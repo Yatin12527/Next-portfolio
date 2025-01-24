@@ -14,7 +14,9 @@ export default {
         custom2: "752px",
         custom3: "507px",
         custom4: "1305px",
-        custom5:"953px"
+        custom5:"953px",
+        custom6:"1075px",
+        custom7:"900px",
       },
       dropShadow: {
         glow: [
