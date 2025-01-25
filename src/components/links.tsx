@@ -18,7 +18,7 @@ const linksData = [
     fallback: "Email",
   },
   {
-    href: "https://drive.google.com/file/d/1ufW0Qn0emmKuISf8jdKjZlJw6buQbd-b/view?usp=drive_link",
+    href: "https://yatinderresume.tiiny.site",
     src: "/resume.svg",
     fallback: "Resume",
   },
