@@ -8,7 +8,7 @@ export default function Page() {
   return (
     <>
       <AosInit />
-      <div className="flex flex-col min-h-screen overflow-x-hidden">
+      <div className="flex flex-col min-h-screen">
         <div id="home" className="h-1"></div>
         <div className="flex-grow">
           <Home />
@@ -20,7 +20,7 @@ export default function Page() {
         <div className="min-h-screen mt-10" id="projects">
           <Projects />
         </div>
-        <div className="min-h-screen mt-10 mb-2" id="journey">
+        <div className="min-h-screen mt-10 mb-2 sm:mb-10" id="journey">
           <Journey />
         </div>
       </div>

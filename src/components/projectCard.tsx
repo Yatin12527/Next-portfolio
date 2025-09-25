@@ -6,7 +6,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 
 interface AvatarProps {
@@ -51,13 +51,13 @@ function ProjectCard({
     <div className="flex justify-center md:justify-start">
       <Card
         spotlightColor={spotlightcolor}
-        className="bg-[#1f1e1f] rounded-2xl font3 border border-gray-600 h-[340px] w-[330px] sm:h-[465px] sm:w-[600px] mt-10 transition-transform ease-in-out duration-300 hover:scale-95"
+        className="bg-[#1f1e1f] rounded-2xl font3 border border-gray-600 h-[340px] w-[330px] sm:h-[465px] sm:w-[600px] mt-10 transition-all ease-in-out duration-500 hover:scale-[1.04] hover:shadow-2xl group"
       >
         <CardHeader>
           <CardTitle className="mb-5 text-2xl flex justify-between font4 mt-2">
             {title}
             <Link href={`projects/${title}`}>
-              <ExternalLink  className="hover:scale-125 ease-in-out duration-300 active:animate-in cursor-pointer" />
+              <ExternalLink className="hover:scale-125 ease-in-out duration-300 active:animate-in cursor-pointer" />
             </Link>
           </CardTitle>
           <CardDescription>
@@ -69,8 +69,12 @@ function ProjectCard({
           <div className="flex flex-row">
             <NewAvatar fallback="error" src={avsrc} bg={bg} />
           </div>
-          <div className="mt-5 ">
-            <img src={src} alt="" />
+          <div className="mt-5 overflow-hidden rounded-sm group-hover:scale-105 transition-transform duration-700 ease-out">
+            <img
+              src={src}
+              alt=""
+              className=" transform group-hover:scale-105 transition-transform duration-700 ease-out"
+            />
           </div>
         </CardContent>
       </Card>

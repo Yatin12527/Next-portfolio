@@ -19,11 +19,11 @@ export default function Navbar() {
       <div className="flex top-4 fixed z-20 sm:w-full justify-center items-center">
         <div
           className="absolute z-40 left-3 sm:top-0 top-1 "
-          data-aos="fade-right"
+          data-aos="fade-up"
           data-aos-delay="1000"
         >
           <Link href="#about" title="Yatinder Chhoker">
-          <DecryptedAvatar />
+            <DecryptedAvatar />
           </Link>
         </div>
         <div
@@ -48,7 +48,7 @@ export default function Navbar() {
       </div>
       <div
         className="fixed  top-5 right-6 z-50"
-        data-aos="fade-left"
+        data-aos="fade-up"
         data-aos-delay="2000"
       >
         <Links />

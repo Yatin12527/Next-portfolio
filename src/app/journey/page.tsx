@@ -20,14 +20,20 @@ const JourneyCard = ({ props }: journeyInterface) => {
   return (
     <>
       <div className="flex justify-between items-center pt-3">
-        <CardTitle className="font4 sm:text-lg text-xs ">{props.title}</CardTitle>
-        <CardDescription className="font3  sm:text-base text-xs">{props.time}</CardDescription>
+        <CardTitle className="font4 sm:text-lg text-xs ">
+          {props.title}
+        </CardTitle>
+        <CardDescription className="font3  sm:text-base text-xs">
+          {props.time}
+        </CardDescription>
       </div>
       <div className="flex justify-between items-center m-0 p-0">
         <CardDescription className="font3 sm:text-base text-xs ">
           {props.description}
         </CardDescription>
-        <CardDescription className="font3 sm:text-base text-xs">{props.location}</CardDescription>
+        <CardDescription className="font3 sm:text-base text-xs">
+          {props.location}
+        </CardDescription>
       </div>
 
       <CardDescription
@@ -43,20 +49,22 @@ const exp = [
     title: "Full Stack Developer Intern",
     description: "Zucol",
     content: `
-      - Worked on apyflux.com using .NET and Next.js.<br/>
-      - Collaborated with teams to integrate APIs and improve performance.
-    `,
-    time: "Sept 2024 – Dec 2024 ",
+    - Developed and optimized apyflux.com using .NET, Next.js, and SQL Server, reducing page load time by 40% and improving UX, leading to a 20% increase in user engagement.<br/>
+    - Migrated codebase to App Router and integrated APIs across modules, improving routing performance and reducing data-fetching latency by 25%.<br/>
+    - Built an admin dashboard with PrimeReact and Shadcn and implemented SEO improvements (+35%), boosting admin productivity and search visibility.<br/>
+  `,
+    time: "Sept 2024 – Dec 2024",
     location: "Remote",
   },
   {
-    title: "Head of Content Department",
+    title: "Head Student Coordinator",
     description: "Placement Cell, UIET Maharshi Dayanand University",
     content: `
-      - Led content creation and collaborated with companies for recruitment drives.<br />
-      - Analyzed feedback to improve strategies and content effectiveness.
-    `,
-    time: "Sept 2024 – Present ",
+    - Led a team of 15 members, managing campus placements for 600+ students and organizing workshops and mock interviews to increase placement success rate by 25%.<br/>
+    - Increased company participation by 30% and strengthened college-HR relationships, resulting in 40% more companies revisiting for placements.<br/>
+    - Streamlined student placement data management, reducing errors by 90% and improving overall reporting and coordination efficiency.<br/>
+  `,
+    time: "Sept 2024 – Present",
     location: "Rohtak, Haryana",
   },
 ];
@@ -91,13 +99,19 @@ function Journey() {
         <Tabs
           defaultValue="experience"
           className="sm:w-[650px]   "
-          data-aos="fade-right"
+          data-aos="fade-up"
         >
           <TabsList className="grid w-full grid-cols-2 border border-zinc-800 bg-[#1f1e1f] h-10 sm:h-11 p-1">
-            <TabsTrigger value="experience" className="sm:text-lg text-base font4 ">
+            <TabsTrigger
+              value="experience"
+              className="sm:text-lg text-base font4 "
+            >
               Experience
             </TabsTrigger>
-            <TabsTrigger value="education" className="sm:text-lg text-base font4">
+            <TabsTrigger
+              value="education"
+              className="sm:text-lg text-base font4"
+            >
               Education
             </TabsTrigger>
           </TabsList>

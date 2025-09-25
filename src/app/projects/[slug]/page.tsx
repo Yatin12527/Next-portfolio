@@ -92,7 +92,7 @@ function Project() {
         </div>
         <div
           className="hidden custom7:block w-1/5 p-4 custom7:fixed top-14 right-0"
-          data-aos="fade-left"
+          data-aos="fade-up"
         >
           <div className="flex flex-col">
             <p className="text-xl custom6:text-2xl text-start font-extrabold drop-shadow-glow mb-3">

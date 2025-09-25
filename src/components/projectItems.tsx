@@ -3,7 +3,7 @@ const projectList = [
     title: "Portfolio",
     date: "Jan 2025",
     src: "/portfolio1.png",
-    link:"https://yatinder-portfolio.vercel.app/",
+    link: "https://yatinder-portfolio.vercel.app/",
     Info: [
       {
         title: "Responsiveness",
@@ -33,7 +33,6 @@ const projectList = [
           "A focused section outlines my technical skills, emphasizing modern tools and technologies I specialize in. This helps recruiters quickly identify my areas of expertise.",
         img: "/portfolio5.png",
       },
-      
     ],
   },
   {
@@ -64,7 +63,79 @@ const projectList = [
         img: "/synxkill3.png",
       },
     ],
-  }
+  },
+  {
+    title: "Scandine",
+    date: "July 2025",
+    src: "/scandine.png",
+    link: "https://scandine-beta.vercel.app/",
+    Info: [
+      {
+        title: "Choose from Stylish Templates",
+        description: "Personalized templates for all your needs",
+        details:
+          "The app provides a variety of pre-designed templates that users can browse and select based on their needs. Whether for personal, professional, or creative purposes, these ready-made templates make it easy to get started quickly and efficiently.",
+        img: "/templates.png",
+      },
+      {
+        title: "Easy Menu Creation",
+        description: "Build and Manage Your Menu Effortlessly",
+        details:
+          "Create and edit your restaurant menu with ease using prebuilt templates. The QR code linked to your menu remains persistent, so you can update items anytime without changing the QR.",
+        img: "/scandine2.png",
+      },
+      {
+        title: "Template Preview & QR Generation",
+        description: "See Your Menu Before Sharing",
+        details:
+          "Preview stylish menu templates before choosing one, and generate a QR code instantly. Your menu is ready to share, and any future edits won’t affect the existing QR, ensuring seamless updates.",
+        img: "/preview.png",
+      },
+      {
+        title: "Modern Dashboard",
+        description: "Manage All Your Menus in One Place",
+        details:
+          "A sleek and intuitive dashboard that lets you view all your menus at a glance and edit any existing menu effortlessly, making menu management simple and efficient.",
+        img: "/dashboardScandine.png",
+      },
+    ],
+  },
+  {
+    title: "AdMyBrand",
+    date: "sep 2025",
+    src: "/admybrand.png",
+    link: "https://admybrand-ai-suite-pi.vercel.app/",
+    Info: [
+      {
+        title: "Sleek Modern Design",
+        description: "A Visually Stunning Landing Page",
+        details:
+          "The website features a clean, modern UI with smooth animations, bold typography, and a layout designed to capture attention immediately.",
+        img: "/landingpage.png",
+      },
+      {
+        title: "Framer-Powered Animations",
+        description: "Smooth, Engaging Interactions",
+        details:
+          "Built with Framer, every scroll and hover interaction feels fluid, providing a premium, app-like experience for users.",
+        img: "/interactions.png",
+      },
+      {
+        title: "Intuitive Layout",
+        description: "Easily Navigate Content",
+        details:
+          "Sections are well-structured and visually distinct, guiding users naturally through the landing page without overwhelming them.",
+        img: "/navigation.png",
+      },
+      {
+        title: "Typography & Visual Hierarchy",
+        description: "Readable and Stylish Text",
+        details:
+          "The page uses modern typography with clear hierarchy, ensuring headings, subheadings, and body text are easy to read and aesthetically balanced.",
+        img: "/typography.png",
+      },
+    ],
+  },
 ];
 
 export default projectList;

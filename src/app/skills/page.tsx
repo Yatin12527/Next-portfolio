@@ -69,7 +69,7 @@ function Skills() {
     },
   ];
   return (
-    <div className="font4 ml-5 mt-20 sm:ml-20" >
+    <div className="font4 ml-5 mt-20 sm:ml-20">
       <p
         className="text-[54px]  text-transparent bg-clip-text bg-gradient-to-r bg-blue-800 from-slate-200 to-gray-600 drop-shadow-glow font-bold "
         data-aos="fade-down"
@@ -83,7 +83,7 @@ function Skills() {
       </p>
       <div
         className="grid grid-cols-1  items-center custom2:grid-cols-2 custom1:grid-cols-3 space-y-4 mt-3  "
-        data-aos="fade-right"
+        data-aos="fade-up"
       >
         {cardComponent.map((data) => (
           <NewCard
